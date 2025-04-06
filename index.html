@@ -124,58 +124,129 @@
 
     </section><!-- /About Section -->
 
+<section id="about" class="about section">
 
-  <!-- Interests Section -->
-    <section id="about" class="about section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Interessen</h2>
+    </div><div class="container" data-aos="fade-up" data-aos-delay="100"> 
+    <div class="interessen-grid">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Interessen</h2>
-        <section id="interessen">
-  <h2>Interessen</h2>
-  <div class="interessen-grid">
+      <div class="interesse-item">
+        <i class="fas fa-dumbbell"></i> 
+        <p>Kraftsport</p>
+      </div>
 
-    <div class="interesse-item">
-      <i class="fas fa-dumbbell"></i> 
-      <p>Kraftsport</p>
-    </div>
+      <div class="interesse-item">
+        <i class="fas fa-swimmer"></i>
+        <p>Schwimmen</p>
+      </div>
 
-    <div class="interesse-item">
-      <i class="fas fa-swimmer"></i>
-      <p>Schwimmen</p>
-    </div>
+      <div class="interesse-item">
+        <i class="fas fa-lightbulb"></i> 
+        <p>DIY</p>
+      </div>
 
-    <div class="interesse-item">
-      <i class="fas fa-lightbulb"></i> 
-      <p>DIY</p>
-    </div>
+      <div class="interesse-item">
+        <i class="fas fa-cubes"></i>
+        <p>3D-Druck</p>
+      </div>
 
-    <div class="interesse-item">
-      <i class="fas fa-cubes"></i>
-      <p>3D-Druck</p>
-    </div>
+      <div class="interesse-item">
+        <i class="fas fa-gamepad"></i>
+        <p>Games</p>
+      </div>
 
-    <div class="interesse-item">
-      <i class="fas fa-gamepad"></i>
-      <p>Games</p>
-    </div>
+      <div class="interesse-item">
+        <i class="fas fa-city"></i>
+        <p>Städtetrips</p>
+      </div>
 
-    <div class="interesse-item">
-      <i class="fas fa-city"></i>
-      <p>Städtetrips</p>
-    </div>
-
+    </div> 
   </div>
-</section>
-      </div><!-- End Section Title -->
+  </section>```
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+**Änderungen im HTML:**
+
+* Wir verwenden deine bestehende `<section id="about" class="about section">`.
+* Wir verwenden deine bestehende Titelstruktur `<div class="container section-title" ...><h2>Interessen</h2></div>`.
+* Der eigentliche Grid-Container (`.interessen-grid`) wird *nach* dem Titel-Container platziert.
+* Ich habe den Grid-Container zusätzlich in einen `<div class="container" data-aos="fade-up" data-aos-delay="100">` gepackt. Das `container` sorgt dafür, dass der Inhalt die gleiche Breite und Zentrierung wie dein Titel hat (vorausgesetzt, deine CSS-Datei definiert `.container` entsprechend). Die `data-aos`-Attribute sorgen für einen konsistenten Animationseffekt, falls du AOS verwendest.
+
+**2. Angepasster CSS-Code:**
+
+Da deine bestehende Struktur wahrscheinlich schon allgemeines Styling für Sections (`.section`), Container (`.container`) und Titel (`.section-title h2`) hat, brauchen wir nur noch das CSS für das Grid selbst und die Items darin. Füge diesen Code zu deiner CSS-Datei hinzu:
+
+```css
+/* Styling NUR für das Interessen-Grid und dessen Elemente */
+
+.interessen-grid {
+  display: grid;
+  /* Erstellt 3 gleich breite Spalten */
+  grid-template-columns: repeat(3, 1fr); 
+  /* Abstand zwischen den Grid-Elementen */
+  gap: 30px 20px; /* 30px vertikal, 20px horizontal */
+
+  /* Zentrierung des Grids innerhalb des übergeordneten .container */
+  /* Passt die maximale Breite ggf. an deine Vorlieben an */
+  max-width: 600px; 
+  margin-left: auto;  
+  margin-right: auto; 
+  /* Fügt etwas Abstand oberhalb des Grids hinzu */
+  margin-top: 30px; 
+}
+
+.interesse-item {
+  /* Zentriert Icon und Text innerhalb jedes Elements */
+  text-align: center; 
+}
+
+.interesse-item i {
+  /* Styling für die Icons */
+  font-size: 2.5em; /* Größe der Icons */
+  color: #0d6efd; /* Blauton (passe es ggf. an deine Farben an) */
+  margin-bottom: 10px; /* Abstand zwischen Icon und Text */
+  display: block; 
+}
+
+.interesse-item p {
+  /* Styling für den Text unter den Icons */
+  margin: 0; 
+  font-size: 0.9em;
+  color: #333; 
+}
+
+/* Responsive Anpassung für kleinere Bildschirme */
+@media (max-width: 768px) { 
+  .interessen-grid {
+    /* Bei mittleren Bildschirmen auf 2 Spalten wechseln */
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 400px; /* Optional: Maximale Breite anpassen */
+  }
+}
+
+@media (max-width: 480px) {
+  .interessen-grid {
+    /* Bei sehr kleinen Bildschirmen auf 1 Spalte wechseln */
+    grid-template-columns: 1fr;
+    max-width: 200px; /* Optional: Maximale Breite anpassen */
+     gap: 25px 0; /* Nur vertikalen Abstand anpassen */
+  }
+  .interesse-item i {
+     font-size: 2.2em; /* Icons evtl. etwas kleiner machen */
+  }
+}
+  
+
+   ___________
+      <!--/div><!-- End Section Title -->
+
+      <!--div class="container" data-aos="fade-up" data-aos-delay="100">
 
         
 
-      </div>
+      <!--/div>
 
-    </section><!-- /About Section -->
+    <!--/section><!-- /About Section -->
 
     
 
