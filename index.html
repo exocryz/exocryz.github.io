@@ -80,16 +80,72 @@
               Technische Innovation ist mein Antrieb - für eine effiziente und zukunftsfähige Zukunft!
             </p>
             
-            <div class="row">
-              <div class="col-lg-10">
-                <ul class="custom-arrow-list">
-                  <li><strong>Bildungsabschluss:</strong> <span>Wirtschaftsingenieur Maschinenbau (B. Eng.)</span></li>
-                  <li><strong>Geburtstag:</strong> <span>19. März 1995</span></li>
-                  <li><strong>Telefon:</strong> <a href="tel:+4915224911239">0152 24911239</a></li>
-                  <li><strong>Wohnorte:</strong> <span>Hannover und Stuttgart, Deutschland</span></li>
-                </ul>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-top: 2rem;">
+              <div style="background: linear-gradient(135deg, rgba(66,153,225,0.1) 0%, rgba(66,153,225,0.05) 100%); border: 2px solid rgba(66,153,225,0.2); border-radius: 12px; padding: 1.2rem; transition: all 0.3s ease; cursor: pointer;" class="info-card-hover">
+                <div style="font-size: 2rem; margin-bottom: 0.6rem; color: #4299e1;">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h6 style="margin-bottom: 0.4rem; font-size: 0.85rem; color: #666; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;">Bildung</h6>
+                <p style="font-size: 0.95rem; color: #333; margin: 0; font-weight: 500;">Wirtschaftsingenieur Maschinenbau</p>
+              </div>
+
+              <div style="background: linear-gradient(135deg, rgba(237,100,166,0.1) 0%, rgba(237,100,166,0.05) 100%); border: 2px solid rgba(237,100,166,0.2); border-radius: 12px; padding: 1.2rem; transition: all 0.3s ease; cursor: pointer;" class="info-card-hover">
+                <div style="font-size: 2rem; margin-bottom: 0.6rem; color: #ed64a6;">
+                  <i class="fas fa-birthday-cake"></i>
+                </div>
+                <h6 style="margin-bottom: 0.4rem; font-size: 0.85rem; color: #666; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;">Geburtstag</h6>
+                <p style="font-size: 0.95rem; color: #333; margin: 0; font-weight: 500;">19. März 1995</p>
+              </div>
+
+              <div style="background: linear-gradient(135deg, rgba(48,195,130,0.1) 0%, rgba(48,195,130,0.05) 100%); border: 2px solid rgba(48,195,130,0.2); border-radius: 12px; padding: 1.2rem; transition: all 0.3s ease; cursor: pointer;" class="info-card-hover">
+                <div style="font-size: 2rem; margin-bottom: 0.6rem; color: #30c382;">
+                  <i class="fas fa-phone-volume"></i>
+                </div>
+                <h6 style="margin-bottom: 0.4rem; font-size: 0.85rem; color: #666; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;">Telefon</h6>
+                <p style="font-size: 0.95rem; color: #333; margin: 0; font-weight: 500;"><a href="tel:+4915224911239" style="color: inherit; text-decoration: none;">0152 24911239</a></p>
+              </div>
+
+              <div style="background: linear-gradient(135deg, rgba(251,182,206,0.1) 0%, rgba(251,182,206,0.05) 100%); border: 2px solid rgba(251,182,206,0.2); border-radius: 12px; padding: 1.2rem; transition: all 0.3s ease; cursor: pointer;" class="info-card-hover">
+                <div style="font-size: 2rem; margin-bottom: 0.6rem; color: #fbb6ce;">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <h6 style="margin-bottom: 0.4rem; font-size: 0.85rem; color: #666; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;">E-Mail</h6>
+                <p style="font-size: 0.95rem; color: #333; margin: 0; font-weight: 500;"><a href="mailto:maximilian.tausch@web.de" style="color: inherit; text-decoration: none;">maximilian.tausch@web.de</a></p>
+              </div>
+
+              <div style="background: linear-gradient(135deg, rgba(237,137,54,0.1) 0%, rgba(237,137,54,0.05) 100%); border: 2px solid rgba(237,137,54,0.2); border-radius: 12px; padding: 1.2rem; transition: all 0.3s ease; cursor: pointer;" class="info-card-hover">
+                <div style="font-size: 2rem; margin-bottom: 0.6rem; color: #ed8936;">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h6 style="margin-bottom: 0.4rem; font-size: 0.85rem; color: #666; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;">Wohnorte</h6>
+                <p style="font-size: 0.95rem; color: #333; margin: 0; font-weight: 500;">Hannover & Stuttgart</p>
               </div>
             </div>
+
+            <style>
+              .info-card-hover {
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+              }
+              .info-card-hover:hover {
+                transform: translateY(-6px) scale(1.01);
+                box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+              }
+              .info-card-hover:hover i {
+                transform: scale(1.2) rotate(-5deg);
+                filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+              }
+              @media (max-width: 992px) {
+                .info-card-hover {
+                  padding: 1rem;
+                }
+                .info-card-hover h6 {
+                  font-size: 0.8rem;
+                }
+                .info-card-hover p {
+                  font-size: 0.9rem !important;
+                }
+              }
+            </style>
           </div>
         </div>
 
