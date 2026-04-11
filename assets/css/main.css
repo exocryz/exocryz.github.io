@@ -619,33 +619,84 @@ section,
 }
 
 /*--------------------------------------------------------------
-# About Section
+# About Section - Interessen Flip-Cards
 --------------------------------------------------------------*/
-.about .content h2 {
-  font-weight: 700;
-  font-size: 24px;
+.about .interessen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
 }
 
-.about .content ul {
-  list-style: none;
-  padding: 0;
+/* Der Container der Karte */
+.about .flip-card {
+  background-color: transparent;
+  height: 200px; /* Höhe der Karten */
+  perspective: 1000px; /* Erzeugt den 3D-Effekt */
 }
 
-.about .content ul li {
-  margin-bottom: 20px;
+/* Innenteil für die Rotation */
+.about .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+/* Drehung bei Hover */
+.about .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Gemeinsame Stile für Vorder- und Rückseite */
+.about .flip-card-front, 
+.about .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Für Safari */
+  backface-visibility: hidden;
+  border-radius: 15px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
-.about .content ul strong {
-  margin-right: 10px;
+/* Vorderseite */
+.about .flip-card-front {
+  background-color: var(--surface-color);
+  color: var(--heading-color);
 }
 
-.about .content ul i {
-  font-size: 16px;
-  margin-right: 5px;
+.about .flip-card-front i {
+  font-size: 2.5rem;
   color: var(--accent-color);
-  line-height: 0;
+  margin-bottom: 15px;
+}
+
+.about .flip-card-front p {
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Rückseite */
+.about .flip-card-back {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  transform: rotateY(180deg); /* Startet bereits gedreht */
+}
+
+.about .flip-card-back p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  font-weight: 400;
 }
 
 /*--------------------------------------------------------------
