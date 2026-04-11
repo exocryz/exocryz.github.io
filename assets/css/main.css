@@ -1347,3 +1347,38 @@ section,
   color: var(--accent-color); /* Nutzt automatisch deine eingestellte Akzentfarbe */
   font-weight: 700; /* Macht den Pfeil etwas dicker */
 }
+
+/* --- EIGENE ANPASSUNGEN: Tech-Stack Liste --- */
+.tech-stack {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid var(--accent-color);
+}
+
+.tech-stack h5 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--heading-color);
+}
+
+.tech-list li {
+  margin-bottom: 15px;
+  display: flex; /* Trennt Icon und Text in zwei saubere Spalten */
+  align-items: flex-start;
+  line-height: 1.6;
+}
+
+.tech-list .tech-icon {
+  font-size: 1.25rem;
+  color: var(--accent-color);
+  margin-right: 15px;
+  margin-top: 2px; /* Richtet das Icon optisch an der ersten Textzeile aus */
+  width: 25px; /* Sichert eine fixe Breite, falls ein Icon schmaler ist als ein anderes */
+  text-align: center;
+  flex-shrink: 0; /* Verhindert, dass das Icon gequetscht wird */
+}
+
+.tech-list strong {
+  color: var(--heading-color);
+}
