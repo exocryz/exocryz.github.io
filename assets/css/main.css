@@ -1324,3 +1324,26 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/*--------------------------------------------------------------
+/* --- EIGENE ANPASSUNGEN: Liste mit Pfeilen --- */
+--------------------------------------------------------------*/
+
+.custom-arrow-list {
+  list-style-type: none; /* Entfernt die schwarzen Standard-Punkte */
+  padding-left: 0; /* Nimmt den standardmäßigen Einzug weg */
+}
+
+.custom-arrow-list li {
+  position: relative;
+  padding-left: 18px; /* Schafft Platz für das > Zeichen */
+  margin-bottom: 10px; /* Ein bisschen Luft zwischen den Zeilen */
+}
+
+.custom-arrow-list li::before {
+  content: ">"; /* Hier definieren wir dein Wunschzeichen */
+  position: absolute;
+  left: 0;
+  color: var(--accent-color); /* Nutzt automatisch deine eingestellte Akzentfarbe */
+  font-weight: 700; /* Macht den Pfeil etwas dicker */
+}
